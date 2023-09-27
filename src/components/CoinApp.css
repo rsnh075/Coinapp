@@ -1,0 +1,423 @@
+.coinapp-wrapper {
+    padding: 0.5rem;
+    font-size: .9rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.coinapp-filter-wrapper {
+    padding: 0 2rem 0 12px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 460px) {
+    .coinapp-filter-wrapper {
+        padding: 0 12px 0 12px;
+        margin-bottom: 10px;
+    }
+}
+
+.coinapp-filter-dropdown {
+    overflow: hidden;
+    width: 100%;
+    height: 248px;
+    transition: height 0.25s ease-in-out;
+    position: relative;
+}
+@media screen and (max-width: 460px) {
+    .coinapp-filter-dropdown {
+        height: 284px;
+    }
+}
+.coinapp-filter-dropdown.coinapp-filter-dropdown--minimized {
+    height: 26px;
+}
+
+.coinapp-filter-row {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+}
+.coinapp-filter-dropdown--minimized .coinapp-filter-row {
+    opacity: 0;
+}
+
+.coinapp-filter-row select {
+    width: 100%;
+}
+
+.coinapp-filter-dropdown__toggle {
+    position: absolute;
+    top: 216px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #cccccc;
+    cursor: pointer;
+    height: 1.6rem;
+    transition: top .25s ease-in-out;
+}
+.coinapp-input-search {
+    max-width: 2rem;
+    max-height: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: #fff;
+    background-color: #74b40e;
+    border-radius: 3px;
+    vertical-align: baseline;
+    padding: 2px;
+    margin: 6px 0 0 0.5rem;
+}
+
+.coinapp-input-search:hover {
+    background-color: #7bb81a;
+}
+
+@media screen and (max-width: 460px) {
+    .coinapp-filter-dropdown__toggle {
+        top: 254px;
+    }
+}
+
+.coinapp-filter-dropdown--minimized .coinapp-filter-dropdown__toggle {
+    top: 20px;
+    border-top: 1px solid #cccccc;
+}
+
+.coinapp-filter-dropdown__toggle-up {
+    color: #bfbfbf;
+    font-size: 1.6rem;
+    margin-bottom: -1.6rem;
+    background-color: #fff;
+}
+
+.coinapp-filter-dropdown__toggle-down {
+    color: #bfbfbf;
+    font-size: 1.6rem;
+    margin-top: -.8rem;
+    background-color: #fff;
+}
+
+.coinapp-data-wrapper,
+.coinapp-result-namescompl-wrapper,
+.coinapp-result-loccompl-wrapper {
+    position: absolute;
+    margin-bottom: 40px;
+    top: 427px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0 12px 0 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    overflow-y: overlay;
+    transition: top .25s ease-in-out;
+}
+
+.coinapp-result-namescompl-wrapper,
+.coinapp-result-loccompl-wrapper {
+    top: 387px;
+}
+
+.coinapp-result-loccompl {
+    display: flex;
+}
+.coinapp-result-loccompl span {
+    flex: 1;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+@media screen and (max-width: 460px) {
+    .coinapp-result-loccompl .rightlane-ismax {
+        display: none;
+    }
+}
+
+.coinapp-data-wrapper.coinapp-data-wrapper--dropdown--minimized {
+    top: 205px;
+}
+.coinapp-result-namescompl-wrapper.coinapp-result-namescompl-wrapper--dropdown--minimized,
+.coinapp-result-loccompl-wrapper.coinapp-result-loccompl-wrapper--dropdown--minimized {
+    top: 165px;
+}
+
+.coinapp-data-wrapper--helper,
+.coinapp-result-namescompl-wrapper--helper,
+.coinapp-result-loccompl-wrapper--helper {
+    padding: 0 12px 0 6px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 460px) {
+    .coinapp-result-loccompl-wrapper,
+    .coinapp-result-namescompl-wrapper {
+        top: 463px;
+        margin-left: 0;
+    }
+    .coinapp-result-loccompl-wrapper.coinapp-result-loccompl-wrapper--dropdown--minimized,
+    .coinapp-result-namescompl-wrapper.coinapp-result-namescompl-wrapper--dropdown--minimized {
+        top: 205px;
+    }
+    .coinapp-data-wrapper {
+        top: 503px;
+    }
+    .coinapp-data-wrapper.coinapp-data-wrapper--dropdown--minimized {
+        top: 245px;
+    }
+    .coinapp-data-wrapper .rightlane-ismax {
+        display: none;
+    }
+    .coinapp-result-column-header .rightlane-ismax {
+        display: none;
+    }
+}
+
+.coinapp-header-wrapper,
+.coinapp-result-header,
+.coinapp-result-column-header {
+    color: #666;
+    font-size: 1.1rem;
+    height: 40px;
+    line-height: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    font-family: "Open Sans SemiBold", sans-serif;
+}
+.coinapp-header-wrapper {
+    height: 50px;
+    text-align: left;
+    border-bottom: 1px solid #d9d9d9;
+    line-height: 50px;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.coinapp-header {
+    width: 50%;
+    position: relative;
+}
+@media screen and (max-width: 460px) {
+    .coinapp-header {
+        width: 100%;
+    }
+}
+.coinapp-result-header {
+    width: auto;
+}
+
+.coinapp-small-font {
+    font-size: .75rem;
+    opacity: .5;
+}
+
+.coinapp-result-column-header {
+    display: flex;
+    text-align: left;
+    line-height: 40px;
+    padding: 0 12px;
+    font-size: 0.9em;
+}
+
+.coinapp-result-column-header__title {
+    flex: 1;
+    text-align: left;
+}
+@media screen and (max-width: 460px) {
+    .coinapp-result-column-header__title:nth-child(2) {
+        flex: auto;
+        max-width: 180px;
+    }
+}
+
+.coinapp-filter-row,
+.coinapp-data-row,
+.coinapp-result-loccompl,
+.coinapp-result-namescompl {
+    width: 100%;
+    display: flex;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 3px;
+    padding-top: 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.coinapp-filter-row.coinapp-filter-column {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+
+@media screen and (max-width: 460px) {
+    .coinapp-filter-row.coinapp-filter-column {
+        display: contents;
+    }
+}
+
+.coinapp-filter-row.coinapp-filter-column input {
+    min-width: 70px;
+}
+@media screen and (min-width: 460px) {
+    .coinapp-filter-row.coinapp-filter-column .coinapp-filter-housenumber {
+        width: 70px;
+    }
+}
+
+
+.coinapp-data-row > span {
+    flex: 1;
+    text-align: left;
+    position: relative;
+}
+@media screen and (max-width: 460px) {
+    .coinapp-data-row > span.coinapp-copytoclipboard {
+        flex: auto;
+        max-width: 180px;
+    }
+}
+
+.coinapp-data-row__value {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.coinapp-filter-wrapper label {
+    color: #666;
+    text-align: left;
+    padding: 0 12px 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Open Sans SemiBold", sans-serif;
+    width: min(30vw, 130px);
+}
+
+.coinapp-filter-wrapper label .coinapp-required {
+    color: #BA2726;
+}
+
+.coinapp-filter-wrapper input {
+    font-family: "Open Sans Regular", sans-serif;
+    border: none;
+    border-bottom: 1px solid #a6a6a6;
+    background-color: transparent;
+    color: #666;
+    font-size: .9rem;
+    margin-top: 4px;
+    padding-top: 4px;
+    text-indent: 3px;
+    flex: 1;
+}
+
+.coinapp-form {
+    display: flex;
+}
+
+.coinapp-form .coinapp-filter-wrapper {
+    min-width: 50%;
+}
+
+.coinapp-filter-footer {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    margin: 0.1rem 0 0 0.7rem;
+}
+
+@media screen and (max-width: 460px) {
+    .coinapp-form {
+        display: block;
+    }
+    .coinapp-form .coinapp-filter-wrapper {
+        min-width: 100%;
+    }
+    .coinapp-result-loccompl-wraper,
+    .coinapp-result-namescompl-wraper {
+        margin-top: 0;
+    }
+    .coinapp-filter-footer {
+        margin: 0 0 0 0.7rem;
+    }
+}
+
+.coinapp-filter-wrapper input::placeholder {
+    opacity: .25;
+}
+
+.coinapp-submitbtn {
+    position: absolute;
+    left: 210px;
+    top: 8px;
+    line-height: 2rem;
+    color: #fff;
+    background-color: #74b40e;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px #0003;
+    width: 140px;
+}
+
+.coinapp-submitbtn:hover {
+    background-color: #7bb81a;
+}
+
+.coinapp-result-column-header {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.coinapp-copytoclipboard {
+    color: #999;
+}
+.coinapp-copytoclipboard:hover {
+    cursor: pointer;
+}
+
+.coinapp-copytoclipboard:active {
+    margin: 1px 0 0 1px;
+}
+
+.coinapp-copytoclipboard-input {
+    margin-right: 5px;
+    text-indent: 10px;
+    color: #666;
+    border: none;
+    border-bottom: 1px solid #a6a6a6;
+    cursor: pointer;
+}
+@media screen and (max-width: 460px) {
+    .coinapp-copytoclipboard-input {
+        width: 130px;
+    }
+}
+.coinapp-copytooltip {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    background-color: #555;
+    top: 0;
+    left: 50%;
+    border-radius: 3px;
+    padding: 0px 12px;
+    line-height: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.errorField {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+    color: red;
+}
